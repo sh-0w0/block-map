@@ -9,7 +9,7 @@
 int main()
 {
     char map[MAPH][MAPW];
-    int nkey;
+    int nkey = 0;
     int trigg = 1;
 
 
@@ -42,6 +42,7 @@ int main()
     {
         system("cls");
         printf("아무키 입력하여 시작");
+        printf("\n a , w ,spacebar 사용");
         Sleep(100);
     }
 
@@ -95,6 +96,12 @@ int main()
             }
             printf("\n");
         }
+        if (nkey == SPACEBAR)
+        {
+            printf("spacebar");
+        }
+        printf("%c", nkey);
+ 
 
 
         Sleep(10);
