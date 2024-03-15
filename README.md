@@ -5,8 +5,6 @@
 #define MAPH 20
 #define MAPW 40
 #define SPACEBAR 32
-#define GRAVITY 1
-
 
 int main()
 {
@@ -21,7 +19,7 @@ int main()
         {
             if ((i == 0) || (i == MAPH - 1))
                 map[i][j] = '#';
-            else if ((j == 0) ||  (j == MAPW - 1))
+            else if ((j == 0) || (j == MAPW - 1))
                 map[i][j] = '#';
             else
                 map[i][j] = '.';
@@ -47,7 +45,7 @@ int main()
         Sleep(100);
     }
 
-    int cur_x = 3, cur_y =10, jump = 0;
+    int cur_x = 3, cur_y = 10, jump = 0;
     while (1)
     {
         if (_kbhit())
@@ -97,7 +95,7 @@ int main()
             }
             printf("\n");
         }
-       
+
 
         Sleep(10);
 
@@ -115,14 +113,14 @@ int main()
             {
                 map[cur_y + jump][cur_x] = '.';
                 map[cur_y][cur_x] = 'o';
-                
+
             }
             map[cur_y + jump][cur_x] = '.';
             map[cur_y][cur_x] = 'o';
 
         }
-            
-            
+
+
 
     }
     return 0;
